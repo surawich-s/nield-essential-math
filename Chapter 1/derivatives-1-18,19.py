@@ -8,10 +8,15 @@ dx_f = diff(f)
 
 print(dx_f)
 
-def f(x):
-    return 3*x**2+1
-def dx_f(x):
-    return 6*x
+# def f(x):
+#     return 3*x**2+1
+# def dx_f(x):
+#     return 6*x
 
-slope_at_2 = dx_f(3)
-print(slope_at_2)
+# slope_at_2 = dx_f(3)
+# print(slope_at_2)
+
+dx_f_callable = lambdify(x, dx_f)
+result2 = dx_f_callable(2) 
+
+print(result2)
